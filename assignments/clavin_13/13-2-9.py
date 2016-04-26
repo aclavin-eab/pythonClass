@@ -44,3 +44,19 @@ class Rational
         numerator = (self.numerator * summand.denomenator
         denomenator = (self.denomenator * summand.numerator)
         return "" + numerator + "/" + denomenator
+
+    def __lt__(self, other):
+        if (self.numerator * other.denomenator) < (other.numerator * self.denomenator):
+                     return true
+        else:
+                     return false
+    def __eq__(self, other):
+        if (self.numerator * other.denomenator) == (other.numerator * self.denomenator):
+                     return true
+        else:
+                     return false
+    def __le__(self, other):
+        if (self.numerator * other.denomenator) <= (other.numerator * self.denomenator):
+                     return true
+        else:
+                     return false
