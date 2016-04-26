@@ -17,65 +17,46 @@ print(sum)
 print(a < b)
 """
 
-class Rational:
+class Rational
     """Rational Number Class"""
-    def __init__(self, numerator, denomenator):
+    __init__(self, numerator, denomenator):
         self.numerator = numerator
         self.denomenator = denomenator
-        self.value = "" + str(numerator) + "/" + str(denomenator)
+        self.value = "" + numerator + "/" + denomenator
         self.digit = numerator / denomenator
 
     def __add__(self, summand):
         numerator = (self.numerator * summand.denomenator) + (summand.numerator * self.denomenator)
         denomenator = (self.denomenator * summand.denomenator)
-        return "" + str(numerator) + "/" + str(denomenator)
+        return "" + numerator + "/" + denomenator
 
     def __sub__(self, term):
-        numerator = (self.numerator * term.denomenator) - (term.numerator * self.denomenator)
-        denomenator = (self.denomenator * term.denomenator)
-        return "" + str(numerator) + "/" + str(denomenator)
+        numerator = (self.numerator * summand.denomenator) - (summand.numerator * self.denomenator)
+        denomenator = (self.denomenator * summand.denomenator)
+        return "" + numerator + "/" + denomenator
 
     def __mul__(self, term):
-        numerator = (self.numerator * term.numerator)
-        denomenator = (self.denomenator * term.denomenator)
-        return "" + str(numerator) + "/" + str(denomenator)
+        numerator = (self.numerator * summand.numerator
+        denomenator = (self.denomenator * summand.denomenator)
+        return "" + numerator + "/" + denomenator
 
     def __truediv__(self, term):
-        numerator = (self.numerator * term.denomenator)
-        denomenator = (self.denomenator * term.numerator)
-        return "" + str(numerator) + "/" + str(denomenator)
+        numerator = (self.numerator * summand.denomenator
+        denomenator = (self.denomenator * summand.numerator)
+        return "" + numerator + "/" + denomenator
 
     def __lt__(self, other):
         if (self.numerator * other.denomenator) < (other.numerator * self.denomenator):
-                     return True
+                     return true
         else:
-                     return False
+                     return false
     def __eq__(self, other):
         if (self.numerator * other.denomenator) == (other.numerator * self.denomenator):
-                     return True
+                     return true
         else:
-                     return False
+                     return false
     def __le__(self, other):
         if (self.numerator * other.denomenator) <= (other.numerator * self.denomenator):
-                     return True
+                     return true
         else:
-                     return False
-    def __str__(self):
-                     return self.value
-
-
-def main():
-    a = Rational(3, 2)
-    b = Rational(2, 3)
-    print (a + b)
-    print (a - b)
-    print (a * b)
-    print (a / b)
-    print (a < b)
-    print (a == b)
-    print (b <= a)
-    print (b.__str__())
-
-if __name__ == '__main__':
-    main()
-                     
+                     return false
